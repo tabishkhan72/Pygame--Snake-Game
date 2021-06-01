@@ -1,7 +1,3 @@
-"""
-Snake Eater
-Made with PyGame
-"""
 
 import pygame, sys, time, random
 
@@ -14,14 +10,13 @@ import pygame, sys, time, random
 # Impossible->  120
 difficulty = 25
 
-# Window size
-frame_size_x = 720
+
+frame_size_x = 900
 frame_size_y = 480
 
-# Checks for errors encountered
+
 check_errors = pygame.init()
-# pygame.init() example output -> (6, 0)
-# second number in tuple gives number of errors
+
 if check_errors[1] > 0:
     print(f'[!] Had {check_errors[1]} errors when initialising game, exiting...')
     sys.exit(-1)
@@ -62,7 +57,7 @@ score = 0
 # Game Over
 def game_over():
     my_font = pygame.font.SysFont('times new roman', 90)
-    game_over_surface = my_font.render('YOU DIED', True, red)
+    game_over_surface = my_font.render('GAME OVER', True, red)
     game_over_rect = game_over_surface.get_rect()
     game_over_rect.midtop = (frame_size_x/2, frame_size_y/4)
     game_window.fill(black)
@@ -108,7 +103,7 @@ while True:
             if event.key == pygame.K_ESCAPE:
                 pygame.event.post(pygame.event.Event(pygame.QUIT))
 
-    # Making sure the snake cannot move in the opposite direction instantaneously
+
     if change_to == 'UP' and direction != 'DOWN':
         direction = 'UP'
     if change_to == 'DOWN' and direction != 'UP':
