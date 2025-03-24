@@ -1,7 +1,3 @@
-Sure! Here's an improved and more polished version of your `README.md` for the Pygame Snake Game. It enhances clarity, formatting, and adds a bit more polish while keeping everything user-friendly and concise:
-
----
-
 # 🐍 Snake Game — Powered by Pygame
 
 A classic **Snake Game** built using **Python** and the **Pygame** library. Eat food, grow your snake, and avoid crashing into yourself!
